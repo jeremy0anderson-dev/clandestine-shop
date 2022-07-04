@@ -1,0 +1,122 @@
+.absolute{
+  position: absolute;
+}
+.fixed{
+    position: fixed!important;
+}
+.toggle-menu{
+    left: 15px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 101;
+    animation-name: closeMenu;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+.toggle-search{
+    right: 15px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 101;
+}
+.toggle-menu-active{
+    left: 55vw;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 101;
+    animation-name: menuButton;
+    animation-delay: 40ms;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+.toggle-search-active{
+    right: 15px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.Content{
+    padding-top: 70px;
+    height: 100vh;
+}
+.sidebar{
+    width: 65vw;
+    height: 100vh;
+    background-color: lightslategray;
+    z-index: 100;
+    top: 0;
+    left:-65vw;
+    animation-name: closeSidebar;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+.sidebar-active{
+    width: 65vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(56, 201, 89, 0.9), rgba(32, 178, 170, 0.61));
+    z-index: 100;
+    top: 0;
+    left:0;
+    animation-name: openSidebar;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+.sidebar-menu{
+    background-color: lightcoral;
+    left: 15px;
+    padding: 30px;
+    margin: 25px;
+    display: flex;
+    height: 100vh;
+    position: sticky;
+    top: 70px;
+    justify-content: center;
+}
+.navigation{
+}
+
+
+
+@keyframes menuButton{
+    from{
+      left: 15px;
+    }
+    to{
+      left: 55vw;
+    }
+}
+@keyframes openSidebar {
+    from {
+      left: -65vw;
+    }
+    to{
+      left: 0;
+    }
+}
+@keyframes closeMenu {
+    from {
+      left:55vw;
+    }
+    to{
+      left: 15px;
+    }
+}
+@keyframes closeSidebar {
+    from {
+      left: 0;
+    }
+    to{
+      left: -65vw;
+    }
+}
