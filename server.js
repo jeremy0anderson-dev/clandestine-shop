@@ -30,9 +30,9 @@ async function startServer(){
     await server.start();
     app.use(json())
     app.use(urlencoded({extended: true}))
-    app.use(static(path.join(__dirname, './clandestine-pilot-2.0/build')))
+    app.use(static(path.join(__dirname, './client/build')))
     app.use(require('cors')());
-    app.get("*",(req,res)=>{res.sendFile(path.join(__dirname, './clandestine-pilot-2.0/build/index.html'))})
+    app.get("*",(req,res)=>{res.sendFile(path.join(__dirname, './client/build/index.html'))})
     server.applyMiddleware({app, cors: {origin: ["http://localhost:3000", "https://studio.apollographql.com"]}});
 
     await new Promise(resolve=>{
